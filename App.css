@@ -1,0 +1,116 @@
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #0a0a0f 0%, #0b0b14 100%);
+  color: #e0f7ff;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  padding: 40px 0 25px 0;
+  background: linear-gradient(90deg, #080808, #101022, #080808);
+  border-bottom: 2px solid rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+  animation: headerGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes headerGlow {
+  from {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.25);
+  }
+}
+
+.glow-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow:
+    0 0 10px #00f5ff,
+    0 0 20px #411ec0,
+    0 0 30px #00f5ff,
+    0 0 60px #00f5ff;
+  animation: pulseGlow 2.5s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+}
+
+.glow-title:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulseGlow {
+  from {
+    text-shadow:
+      0 0 10px #00f5ff,
+      0 0 20px #00f5ff,
+      0 0 40px #1100ff;
+  }
+  to {
+    text-shadow:
+      0 0 15px #ff00ff,
+      0 0 30px #ff00ff,
+      0 0 60px #ff00ff;
+  }
+}
+
+.tagline {
+  margin-top: 10px;
+  color: #aeeaff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  animation: fadeInUp 2s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section, .product-container, .cart, .checkout-form {
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1900ff, #ff00ff);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b14;
+}
+
+
+footer {
+  padding: 20px;
+  color: #aeeaff;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 255, 255, 0.3);
+  margin-top: 30px;
+  opacity: 0.8;
+}
